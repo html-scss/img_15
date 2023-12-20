@@ -236,7 +236,7 @@ html body .loading {
   flex-flow: column;
   pointer-events: none;
   animation-name: loading;
-  animation-duration: 5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 html body .loading p {
