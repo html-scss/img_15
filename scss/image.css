@@ -1,0 +1,371 @@
+@keyframes op-tr {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+@keyframes op-tr- {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+@keyframes loading {
+  from {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, h1, h2, h3, a {
+  font-family: "Open Sans", sans-serif;
+  color: #323232;
+}
+
+img {
+  border-radius: 0.4vw;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: #FFD9B2;
+}
+html body .container {
+  margin: 10px 20px;
+}
+html body .container .exit a {
+  opacity: 1;
+  z-index: 100;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("../img-sait/img-sait/next.jpg");
+  background-size: 100% 100%;
+  border-radius: 20px;
+}
+html body .container .exit a:hover {
+  animation-name: op-tr-;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+html body .container .text {
+  margin-top: 55px;
+  font-size: 1em;
+  text-align: center;
+}
+html body .container .text .text-inform h1 {
+  font-size: 3em;
+  margin: 50px 0;
+}
+html body .container .text .text-inform p[data-title=""] {
+  font-size: 2em;
+}
+html body .container .text .text-inform p[data-text=""] {
+  margin: 20px 0;
+}
+html body .container .telephone-number a[href="#open-number"] {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 81%;
+  left: 10px;
+  width: 250px;
+  height: 75px;
+  font-size: 3em;
+  background-color: #C3A150;
+  border: 5px solid #323232;
+  border-radius: 20px;
+}
+html body .container .telephone-number a[href="#open-number"]:hover {
+  animation-name: op-tr-;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+html body .container .telephone-number .number {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: opacity 350ms ease-in;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+html body .container .telephone-number .number:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+html body .container .telephone-number .number:target ~ a[href="#open-number"] {
+  display: none;
+}
+html body .container .telephone-number .number .number-content {
+  background-color: #FFD9B2;
+  border: 5px solid #323232;
+  border-radius: 20px;
+  padding: 0 3vw 1vw 3vw;
+  text-align: center;
+}
+html body .container .telephone-number .number .number-content p[class=title-number] {
+  font-size: 2em;
+  margin: 1vw 0;
+}
+html body .container .telephone-number .number .number-content p[class=p-number] {
+  font-size: 3em;
+}
+html body .container .telephone-number .number .number-content a[data-link=""] {
+  border-bottom: 2px solid #323232;
+  font-size: 2.5em;
+  font-weight: 500;
+  margin: 1.5vw 0;
+}
+html body .container .telephone-number .number .number-content a[data-link=""]:hover {
+  opacity: 0.7;
+}
+html body .container .telephone-number .number .number-content a[href="#number-close"] {
+  opacity: 0.7;
+  z-index: 150;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("../img-sait/img-sait/next2.jpg");
+  background-size: 100% 100%;
+  border-radius: 20px;
+}
+html body .container .telephone-number .number .number-content a[href="#number-close"]:hover {
+  animation-name: op-tr;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+html body .container .in-top {
+  z-index: 10;
+  position: fixed;
+  right: 10vw;
+  bottom: 9vw;
+}
+html body .container .in-top:hover {
+  animation-name: op-tr-;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+html body .container .in-top .in-top-a img {
+  background-size: 100% 100%;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+html body .container .picture {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 130px;
+}
+html body .container .picture .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body .container .picture .img a[href="#openModal"] figure, html body .container .picture .img a[href="#openModal_2"] figure, html body .container .picture .img a[href="#openModal_3"] figure,
+html body .container .picture .img a[href="#openModal_4"] figure, html body .container .picture .img a[href="#openModal_5"] figure, html body .container .picture .img a[href="#openModal_6"] figure,
+html body .container .picture .img a[href="#openModal_7"] figure, html body .container .picture .img a[href="#openModal_8"] figure, html body .container .picture .img a[href="#openModal_9"] figure,
+html body .container .picture .img a[href="#openModal_10"] figure, html body .container .picture .img a[href="#openModal_11"] figure, html body .container .picture .img a[href="#openModal_12"] figure,
+html body .container .picture .img a[href="#openModal_13"] figure, html body .container .picture .img a[href="#openModal_14"] figure, html body .container .picture .img a[href="#openModal_15"] figure,
+html body .container .picture .img a[href="#openModal_16"] figure, html body .container .picture .img a[href="#openModal_17"] figure, html body .container .picture .img a[href="#openModal_18"] figure,
+html body .container .picture .img a[href="#openModal_19"] figure, html body .container .picture .img a[href="#openModal_20"] figure, html body .container .picture .img a[href="#openModal_21"] figure,
+html body .container .picture .img a[href="#openModal_22"] figure, html body .container .picture .img a[href="#openModal_23"] figure, html body .container .picture .img a[href="#openModal_24"] figure,
+html body .container .picture .img a[href="#openModal_25"] figure, html body .container .picture .img a[href="#openModal_26"] figure, html body .container .picture .img a[href="#openModal_27"] figure,
+html body .container .picture .img a[href="#openModal_28"] figure, html body .container .picture .img a[href="#openModal_29"] figure, html body .container .picture .img a[href="#openModal_30"] figure {
+  margin: 20px auto;
+  transition-property: transform, opacity;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+html body .container .picture .img a[href="#openModal"] figure:hover, html body .container .picture .img a[href="#openModal_2"] figure:hover, html body .container .picture .img a[href="#openModal_3"] figure:hover,
+html body .container .picture .img a[href="#openModal_4"] figure:hover, html body .container .picture .img a[href="#openModal_5"] figure:hover, html body .container .picture .img a[href="#openModal_6"] figure:hover,
+html body .container .picture .img a[href="#openModal_7"] figure:hover, html body .container .picture .img a[href="#openModal_8"] figure:hover, html body .container .picture .img a[href="#openModal_9"] figure:hover,
+html body .container .picture .img a[href="#openModal_10"] figure:hover, html body .container .picture .img a[href="#openModal_11"] figure:hover, html body .container .picture .img a[href="#openModal_12"] figure:hover,
+html body .container .picture .img a[href="#openModal_13"] figure:hover, html body .container .picture .img a[href="#openModal_14"] figure:hover, html body .container .picture .img a[href="#openModal_15"] figure:hover,
+html body .container .picture .img a[href="#openModal_16"] figure:hover, html body .container .picture .img a[href="#openModal_17"] figure:hover, html body .container .picture .img a[href="#openModal_18"] figure:hover,
+html body .container .picture .img a[href="#openModal_19"] figure:hover, html body .container .picture .img a[href="#openModal_20"] figure:hover, html body .container .picture .img a[href="#openModal_21"] figure:hover,
+html body .container .picture .img a[href="#openModal_22"] figure:hover, html body .container .picture .img a[href="#openModal_23"] figure:hover, html body .container .picture .img a[href="#openModal_24"] figure:hover,
+html body .container .picture .img a[href="#openModal_25"] figure:hover, html body .container .picture .img a[href="#openModal_26"] figure:hover, html body .container .picture .img a[href="#openModal_27"] figure:hover,
+html body .container .picture .img a[href="#openModal_28"] figure:hover, html body .container .picture .img a[href="#openModal_29"] figure:hover, html body .container .picture .img a[href="#openModal_30"] figure:hover {
+  animation-name: op-tr-;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+html body .container .picture .img a[href="#openModal"] figure img, html body .container .picture .img a[href="#openModal_2"] figure img, html body .container .picture .img a[href="#openModal_3"] figure img,
+html body .container .picture .img a[href="#openModal_4"] figure img, html body .container .picture .img a[href="#openModal_5"] figure img, html body .container .picture .img a[href="#openModal_6"] figure img,
+html body .container .picture .img a[href="#openModal_7"] figure img, html body .container .picture .img a[href="#openModal_8"] figure img, html body .container .picture .img a[href="#openModal_9"] figure img,
+html body .container .picture .img a[href="#openModal_10"] figure img, html body .container .picture .img a[href="#openModal_11"] figure img, html body .container .picture .img a[href="#openModal_12"] figure img,
+html body .container .picture .img a[href="#openModal_13"] figure img, html body .container .picture .img a[href="#openModal_14"] figure img, html body .container .picture .img a[href="#openModal_15"] figure img,
+html body .container .picture .img a[href="#openModal_16"] figure img, html body .container .picture .img a[href="#openModal_17"] figure img, html body .container .picture .img a[href="#openModal_18"] figure img,
+html body .container .picture .img a[href="#openModal_19"] figure img, html body .container .picture .img a[href="#openModal_20"] figure img, html body .container .picture .img a[href="#openModal_21"] figure img,
+html body .container .picture .img a[href="#openModal_22"] figure img, html body .container .picture .img a[href="#openModal_23"] figure img, html body .container .picture .img a[href="#openModal_24"] figure img,
+html body .container .picture .img a[href="#openModal_25"] figure img, html body .container .picture .img a[href="#openModal_26"] figure img, html body .container .picture .img a[href="#openModal_27"] figure img,
+html body .container .picture .img a[href="#openModal_28"] figure img, html body .container .picture .img a[href="#openModal_29"] figure img, html body .container .picture .img a[href="#openModal_30"] figure img {
+  width: 35vw;
+  display: block;
+}
+html body .container .picture .img a[href="#openModal"] figure figcaption p, html body .container .picture .img a[href="#openModal_2"] figure figcaption p, html body .container .picture .img a[href="#openModal_3"] figure figcaption p,
+html body .container .picture .img a[href="#openModal_4"] figure figcaption p, html body .container .picture .img a[href="#openModal_5"] figure figcaption p, html body .container .picture .img a[href="#openModal_6"] figure figcaption p,
+html body .container .picture .img a[href="#openModal_7"] figure figcaption p, html body .container .picture .img a[href="#openModal_8"] figure figcaption p, html body .container .picture .img a[href="#openModal_9"] figure figcaption p,
+html body .container .picture .img a[href="#openModal_10"] figure figcaption p, html body .container .picture .img a[href="#openModal_11"] figure figcaption p, html body .container .picture .img a[href="#openModal_12"] figure figcaption p,
+html body .container .picture .img a[href="#openModal_13"] figure figcaption p, html body .container .picture .img a[href="#openModal_14"] figure figcaption p, html body .container .picture .img a[href="#openModal_15"] figure figcaption p,
+html body .container .picture .img a[href="#openModal_16"] figure figcaption p, html body .container .picture .img a[href="#openModal_17"] figure figcaption p, html body .container .picture .img a[href="#openModal_18"] figure figcaption p,
+html body .container .picture .img a[href="#openModal_19"] figure figcaption p, html body .container .picture .img a[href="#openModal_20"] figure figcaption p, html body .container .picture .img a[href="#openModal_21"] figure figcaption p,
+html body .container .picture .img a[href="#openModal_22"] figure figcaption p, html body .container .picture .img a[href="#openModal_23"] figure figcaption p, html body .container .picture .img a[href="#openModal_24"] figure figcaption p,
+html body .container .picture .img a[href="#openModal_25"] figure figcaption p, html body .container .picture .img a[href="#openModal_26"] figure figcaption p, html body .container .picture .img a[href="#openModal_27"] figure figcaption p,
+html body .container .picture .img a[href="#openModal_28"] figure figcaption p, html body .container .picture .img a[href="#openModal_29"] figure figcaption p, html body .container .picture .img a[href="#openModal_30"] figure figcaption p {
+  font-size: 30px;
+  text-align: center;
+  color: #323232;
+}
+html body .container .picture .img .modal {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+html body .container .picture .img .modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+html body .container .picture .img .modal .modal-content {
+  margin: 60px 0;
+  text-align: center;
+}
+html body .container .picture .img .modal .modal-content h1 {
+  color: #FFD9B2;
+  margin: 30px 0;
+}
+html body .container .picture .img .modal .modal-content h1 span {
+  font-weight: lighter;
+}
+html body .container .picture .img .modal .modal-content figure {
+  margin: 0 auto;
+  width: 80%;
+}
+html body .container .picture .img .modal .modal-content figure img {
+  width: 100%;
+  height: auto;
+}
+html body .container .picture .img .modal .modal-content figure figcaption {
+  font-size: 150%;
+}
+html body .container .picture .img .modal .modal-content figure figcaption p {
+  color: #FFD9B2;
+  margin: 20px 0;
+}
+html body .container .picture .img .modal .modal-content figure figcaption p[data-price] {
+  text-align: left;
+}
+html body .container .picture .img .modal .modal-content a {
+  opacity: 0.7;
+  z-index: 150;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("../img-sait/img-sait/next2.jpg");
+  background-size: 100% 100%;
+  border-radius: 20px;
+}
+html body .container .picture .img .modal .modal-content a:hover {
+  animation-name: op-tr-;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+html body .loading {
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFD9B2;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  pointer-events: none;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+html body .loading p {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+html body .loading img {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  background-size: 100% 100%;
+}/*# sourceMappingURL=image.css.map */

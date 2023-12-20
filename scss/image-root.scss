@@ -1,0 +1,42 @@
+$important-color: #FFD9B2;
+$important-color2: #C3A150;
+$text-color: #323232;
+
+@keyframes op-tr {
+    from {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+  
+    to {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+  }
+  @keyframes op-tr- {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+  
+    to {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+  }
+
+  @keyframes loading {
+    from {
+        opacity: 1;
+        pointer-events: auto;
+    }
+  
+    90% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        pointer-events: none;
+    }
+  }
+  

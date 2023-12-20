@@ -1,0 +1,47 @@
+/*
+>= 1200
+992-1199
+576-768
+460-576
+414-460
+375-414
+320-375
+*/
+@media screen and (max-width: 767px) {
+      html body .container .picture {
+        grid-template-columns:  1fr;
+      }
+      html body .container .picture .img a[href="#openModal"] figure img, html body .container .picture .img a[href="#openModal_2"] figure img, html body .container .picture .img a[href="#openModal_3"] figure img,
+      html body .container .picture .img a[href="#openModal_4"] figure img, html body .container .picture .img a[href="#openModal_5"] figure img, html body .container .picture .img a[href="#openModal_6"] figure img,
+      html body .container .picture .img a[href="#openModal_7"] figure img, html body .container .picture .img a[href="#openModal_8"] figure img, html body .container .picture .img a[href="#openModal_9"] figure img,
+      html body .container .picture .img a[href="#openModal_10"] figure img, html body .container .picture .img a[href="#openModal_11"] figure img, html body .container .picture .img a[href="#openModal_12"] figure img,
+      html body .container .picture .img a[href="#openModal_13"] figure img, html body .container .picture .img a[href="#openModal_14"] figure img, html body .container .picture .img a[href="#openModal_15"] figure img,
+      html body .container .picture .img a[href="#openModal_16"] figure img, html body .container .picture .img a[href="#openModal_17"] figure img, html body .container .picture .img a[href="#openModal_18"] figure img,
+      html body .container .picture .img a[href="#openModal_19"] figure img, html body .container .picture .img a[href="#openModal_20"] figure img, html body .container .picture .img a[href="#openModal_21"] figure img,
+      html body .container .picture .img a[href="#openModal_22"] figure img, html body .container .picture .img a[href="#openModal_23"] figure img, html body .container .picture .img a[href="#openModal_24"] figure img,
+      html body .container .picture .img a[href="#openModal_25"] figure img, html body .container .picture .img a[href="#openModal_26"] figure img, html body .container .picture .img a[href="#openModal_27"] figure img,
+      html body .container .picture .img a[href="#openModal_28"] figure img, html body .container .picture .img a[href="#openModal_29"] figure img, html body .container .picture .img a[href="#openModal_30"] figure img {
+        width: 90vw;
+        height: auto;
+      }
+      }
+
+@media screen and (max-width: 466px) {
+  html body .container .telephone-number .number .number-content p[class=title-number] {
+    font-size: 1.5em;
+  }
+  html body .container .telephone-number .number .number-content p[class=p-number] {
+    font-size: 2em;
+  }
+  html body .container .telephone-number .number .number-content a[data-link=""] {
+    font-size: 1.3em;
+  }
+html body .container .text .text-inform h1 {
+        font-size: 2em;
+    }
+    html body .container .telephone-number a[href="#open-number"] {
+      width: 160px;
+      height: 60px;
+      font-size: 2em;
+    }
+  }

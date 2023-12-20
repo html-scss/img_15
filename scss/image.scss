@@ -1,0 +1,333 @@
+@import "image-root.scss";
+* {
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar-thumb{
+    display: none;
+
+    
+}
+::-webkit-scrollbar {
+    display: none;
+
+
+}
+::-webkit-scrollbar-button {
+    display: none;
+    }
+a {
+    text-decoration: none;
+}
+p, h1, h2, h3, a {
+font-family: 'Open Sans', sans-serif;
+color: $text-color;
+}
+img {
+    border-radius: 0.4vw;
+}
+html {
+    scroll-behavior: smooth;
+    body {
+        background-color: $important-color;
+    .container {
+    margin: 10px 20px;
+    .exit {
+        a {
+            opacity: 1;
+            z-index: 100;
+            position: fixed;
+            top: 1%;
+            left: 1%;
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url("../img-sait/img-sait/next.jpg");
+            background-size: 100% 100%;
+            border-radius: 20px;
+            &:hover {
+                animation-name: op-tr-;
+                animation-duration: 0.3s;
+                animation-fill-mode:forwards;
+            }
+        } 
+    }
+    .text {
+        margin-top: 55px;
+        font-size: 1em;
+        text-align: center;
+        .text-inform {
+        h1 {
+            font-size: 3em;
+            margin: 50px 0;
+        }
+        p[data-title=""] {
+            font-size: 2em;
+        }
+        p[data-text=""] {
+            margin: 20px 0;
+        }
+                    }   
+
+    }
+    .telephone-number {
+        a[href="#open-number"] {
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 81%;
+            left: 10px;
+            width: 250px;
+            height: 75px;
+            font-size: 3em;
+        background-color: $important-color2;
+        border: 5px solid $text-color;
+        border-radius: 20px;
+        &:hover {
+            animation-name: op-tr-;
+            animation-duration: 0.3s;
+            animation-fill-mode:forwards;
+        }
+            }     
+
+        .number {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        background: rgba(0,0,0,0.3);
+        z-index: 100;
+        -webkit-transition: opacity 350ms ease-in; 
+        -moz-transition: opacity 350ms ease-in;
+        transition: opacity 350ms ease-in;
+        opacity: 0;
+        pointer-events: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            &:target {
+                opacity: 1;
+                pointer-events: auto;
+            }
+            &:target ~ a[href="#open-number"] {
+                display: none;
+            }
+            .number-content {
+                background-color: $important-color;
+                border: 5px solid $text-color;
+                border-radius: 20px;
+                padding: 0 3vw 1vw 3vw;
+                text-align: center;
+                p[class="title-number"] {
+                    font-size: 2em;
+                    margin: 1vw 0;
+                }
+                p[class="p-number"] {
+                    font-size: 3em;
+                    }
+                    a[data-link=""] {
+                        border-bottom: 2px solid $text-color;
+                        font-size: 2.5em;
+                        font-weight: 500;
+                        margin: 1.5vw 0;
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                    }
+                    a[href="#number-close"] {
+                        opacity: 0.7;
+                        z-index: 150;
+                        position: fixed;
+                        top: 1%;
+                        left: 1%;
+                        display: block;
+                        width: 60px;
+                        height: 60px;
+                        background: url("../img-sait/img-sait/next2.jpg");
+                        background-size: 100% 100%;
+                        border-radius: 20px;
+                        &:hover {
+                            animation-name: op-tr;
+                            animation-duration: 0.3s;
+                            animation-fill-mode:forwards;
+                        }
+                    }
+            }
+        }
+    }
+
+    .in-top {
+        z-index: 10;
+        position: fixed;
+        right: 10vw;
+        bottom: 9vw;
+                &:hover {
+                animation-name: op-tr-;
+                animation-duration: 0.3s;
+                animation-fill-mode:forwards;
+            }
+        .in-top-a {
+            img {
+                background-size: 100% 100%;
+                border-radius: 100%;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+    .picture {
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 130px;
+        .img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a[href="#openModal"], a[href="#openModal_2"], a[href="#openModal_3"], 
+            a[href="#openModal_4"], a[href="#openModal_5"], a[href="#openModal_6"], 
+            a[href="#openModal_7"], a[href="#openModal_8"], a[href="#openModal_9"], 
+            a[href="#openModal_10"], a[href="#openModal_11"], a[href="#openModal_12"], 
+            a[href="#openModal_13"], a[href="#openModal_14"], a[href="#openModal_15"], 
+            a[href="#openModal_16"], a[href="#openModal_17"], a[href="#openModal_18"],
+            a[href="#openModal_19"], a[href="#openModal_20"], a[href="#openModal_21"], 
+            a[href="#openModal_22"], a[href="#openModal_23"], a[href="#openModal_24"], 
+            a[href="#openModal_25"], a[href="#openModal_26"], a[href="#openModal_27"],
+            a[href="#openModal_28"], a[href="#openModal_29"], a[href="#openModal_30"] {
+                
+                figure {
+                    margin: 20px auto;
+                    transition-property: transform, opacity;
+                    transition-duration: 0.1s;
+                    transition-timing-function: linear;
+                    &:hover {
+                        animation-name: op-tr-;
+                        animation-duration: 0.3s;
+                        animation-fill-mode:forwards;
+                    }
+                    img {
+                        width: 35vw;
+                    display: block;
+                }
+                figcaption {
+                    p {
+                        font-size: 30px;
+                    text-align: center;
+                    color: $text-color;
+                    }
+                            }
+                        }
+                    }
+                    .modal {
+                        overflow: auto;
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background: rgba(0,0,0,0.7);
+                        z-index: 100;
+                        opacity: 0;
+                        -webkit-transition: opacity 250ms ease-in; 
+                        -moz-transition: opacity 250ms ease-in;
+                        transition: opacity 250ms ease-in;
+                        pointer-events: none;
+                        margin: 0;
+                        padding: 0;
+                        &:target {
+                            opacity: 1;
+                            pointer-events: auto;
+                        }
+                                .modal-content {
+                                    margin: 60px 0;
+                                    text-align: center;
+                                    h1 {
+                                        color: $important-color;
+                                        margin: 30px 0;
+                                        span {
+                                            font-weight: lighter;
+                                        }
+                                        }
+                                    figure {
+                                        margin: 0 auto;
+                                        width: 80%;
+                                        img {
+                                            width: 100%;
+                                            height: auto;
+                                    }
+                                        figcaption {
+                                            font-size: 150%;
+                                            p {
+                                                color: $important-color;
+                                                margin: 20px 0;
+                                            }
+                                            p[data-price] {
+                                                text-align: left;
+                                            }
+                                        }
+                                    }
+                                        a {
+                                            opacity: 0.7;
+                                            z-index: 150;
+                                            position: fixed;
+                                            top: 1%;
+                                            left: 1%;
+                                            display: block;
+                                            width: 60px;
+                                            height: 60px;
+                                            background: url("../img-sait/img-sait/next2.jpg");
+                                            background-size: 100% 100%;
+                                            border-radius: 20px;
+                                            &:hover {
+                                                animation-name: op-tr-;
+                                                animation-duration: 0.3s;
+                                                animation-fill-mode:forwards;
+                                            }
+                                        }
+                        }
+                    }
+                }
+            }
+        }
+        .loading {
+            flex-wrap: wrap;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-color: $important-color;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            pointer-events: none;
+            
+            animation-name: loading;
+            animation-duration: 1s;
+            animation-fill-mode:forwards;
+                p {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                    margin-bottom: 50px;
+                }
+                img {
+                    width: 100px;
+                    height: 100px;
+                    margin: 0;
+                    background-size: 100% 100%;
+                }
+    }
+
+    }
+}
+    

@@ -1,0 +1,252 @@
+@keyframes op-tr {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+@keyframes op-tr- {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+@keyframes loading {
+  from {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, h1, h2, h3, a {
+  font-family: "Open Sans", sans-serif;
+  color: #323232;
+}
+
+img {
+  border-radius: 0.4vw;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: #FFD9B2;
+}
+html body .container {
+  margin: 10px 20px;
+}
+html body .container .text {
+  margin-top: 55px;
+  font-size: 1em;
+  text-align: center;
+}
+html body .container .text .text-inform h1 {
+  font-size: 3em;
+}
+html body .container .text .text-inform p[data-title=""] {
+  font-size: 2em;
+}
+html body .container .text .text-inform p[data-text=""] {
+  margin: 20px 0;
+}
+html body .container .text .telephone-number a[href="#open-number"] {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 81%;
+  left: 10px;
+  width: 250px;
+  height: 75px;
+  font-size: 3em;
+  background-color: #C3A150;
+  border: 5px solid #323232;
+  border-radius: 20px;
+}
+html body .container .text .telephone-number a[href="#open-number"]:hover {
+  animation-name: op-tr-;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+html body .container .text .telephone-number .number {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: opacity 350ms ease-in;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+html body .container .text .telephone-number .number:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+html body .container .text .telephone-number .number:target ~ a[href="#open-number"] {
+  display: none;
+}
+html body .container .text .telephone-number .number .number-content {
+  background-color: #FFD9B2;
+  border: 5px solid #323232;
+  border-radius: 20px;
+  padding: 0 3vw 1vw 3vw;
+  text-align: center;
+}
+html body .container .text .telephone-number .number .number-content p[class=title-number] {
+  font-size: 2em;
+  margin: 1vw 0;
+}
+html body .container .text .telephone-number .number .number-content p[class=p-number] {
+  font-size: 3em;
+}
+html body .container .text .telephone-number .number .number-content a[data-link=""] {
+  border-bottom: 2px solid #323232;
+  font-size: 2.5em;
+  font-weight: 500;
+  margin: 1.5vw 0;
+}
+html body .container .text .telephone-number .number .number-content a[data-link=""]:hover {
+  opacity: 0.7;
+}
+html body .container .text .telephone-number .number .number-content a[href="#number-close"] {
+  opacity: 0.7;
+  z-index: 150;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("../img-sait/img-sait/next2.jpg");
+  background-size: 100% 100%;
+  border-radius: 20px;
+}
+html body .container .text .telephone-number .number .number-content a[href="#number-close"]:hover {
+  animation-name: op-tr;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+html body .container .in-top {
+  z-index: 10;
+  position: fixed;
+  right: 10vw;
+  bottom: 9vw;
+}
+html body .container .in-top:hover {
+  animation-name: op-tr-;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+html body .container .in-top .in-top-a img {
+  background-size: 100% 100%;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+html body .container .container {
+  display: flex;
+  justify-content: center;
+}
+html body .container .container .picture {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5vw;
+  margin: 20px 0 130px 0;
+}
+html body .container .container .picture .img {
+  text-align: center;
+  opacity: 1;
+}
+html body .container .container .picture .img:hover {
+  animation-name: op-tr-;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+html body .container .container .picture .img p {
+  font-size: 20px;
+}
+html body .container .container .picture .img .image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1vw;
+}
+html body .container .container .picture .img .image img {
+  background-size: cover;
+  width: 10vw;
+  width: 10vw;
+}
+html body .loading {
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFD9B2;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  pointer-events: none;
+  animation-name: loading;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+html body .loading p {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+html body .loading img {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  background-size: 100% 100%;
+}/*# sourceMappingURL=index.css.map */
